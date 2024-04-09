@@ -1,5 +1,5 @@
 {% set name = "django-data-browser" %}
-{% set version = "4.2.9" %}
+{% set version = "4.2.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-data-browser-{{ version }}.tar.gz
-  sha256: 578b0550ff40ba9ca66e8d46eec15f53078f95afa17d2c1a8c82b4d80c7e1d9c
+  sha256: b4ba9b00548d5d8d84edd045bbf8dc7b8d4a56b73e85bc37baf863f7903e4d3c
 
 build:
   noarch: python
