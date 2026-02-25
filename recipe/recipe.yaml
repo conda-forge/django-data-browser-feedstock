@@ -3,18 +3,18 @@ schema_version: 1
 
 context:
   name: django-data-browser
-  version: "4.2.10"
+  version: 4.2.11
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/django-data-browser-${{ version }}.tar.gz
-  sha256: b4ba9b00548d5d8d84edd045bbf8dc7b8d4a56b73e85bc37baf863f7903e4d3c
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 75be55bcff21c80a9d5b9d3270537f466241b3d34f05981db917d41836b35666
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -25,11 +25,10 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }},<4.0
-    - django >=3.2
+    - django >=4.2
     - hyperlink
     - python-dateutil
     - sqlparse
-
 tests:
   - python:
       imports:
