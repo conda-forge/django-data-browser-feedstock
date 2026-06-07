@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: django-data-browser
-  version: "4.2.13"
+  version: "4.2.14"
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 5662f048359ad89a90a7a80177f817d2b7336d2aa55f8cede96187041193239d
+  sha256: 3bdb85b6d453da0d7b8880ec531bd9c26f6bdb90002e37bede677f29488acb55
 
 build:
   number: 0
